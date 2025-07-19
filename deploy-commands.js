@@ -15,11 +15,11 @@ const rest = new REST({ version: '10' }).setToken(process.env.DISCORD_TOKEN);
 
 (async () => {
   try {
-    console.log('⏳ Registering slash commands...');
+    console.log('Registering slash commands...');
     await rest.put(Routes.applicationCommands(process.env.CLIENT_ID), {
       body: commands,
     });
-    console.log('✅ Slash command registered.');
+    console.log('Command registered.');
   } catch (error) {
     console.error(error);
   }

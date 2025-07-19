@@ -1,5 +1,5 @@
 const sqlite3 = require('sqlite3').verbose();
-const db = new sqlite3.Database('./data/timeData.json'); // or .sqlite if preferred
+const db = new sqlite3.Database('./data/timeData.json');
 
 db.serialize(() => {
   db.run(`
